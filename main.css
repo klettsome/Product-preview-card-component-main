@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+/* =======================
+    Base Element Styles
+=========================*/
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: hsl(228, 12%, 48%);
+    background-color: hsl(30, 38%, 92%);
+}
+
+h1, .card_sale {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 0.875em;
+}
+
+.btn {
+    text-align: center;
+    padding: .625em 1.25em;
+    border-radius: .35em;
+}
+
+/* =======================
+    Base Layout Styles
+=========================*/
+
+/* ==== layout Containers ==== */
+body, .cards, .card, .card_price {
+    display: flex;
+}
+.cards, body {
+    justify-content: center;
+    align-items: center;
+}
+
+.card_main {
+    padding: 1.7em;
+}
+
+.card {
+    flex-direction: column;
+}
+
+.card_price {
+    gap: 1em;
+}
+
+.card_category, .card_title, .card_sale {
+    margin-bottom: 5%;
+}
+
+.card_title, .card_text, .card_sale {
+    margin-top: 0;
+}
+
+/* ==== Page Elements ==== */
+
+.card {
+    width: 21.875rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.card_header {
+    min-height: 15.625rem;
+    background-image: url(/images/image-product-mobile.jpg);
+    background-size: cover;
+}
+
+.card_category {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.card_title {
+    font-size: 2.1em;
+    color: hsl(212, 21%, 14%);
+    line-height: 1; 
+}
+
+.card_sale {
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+}
+
+.card_full {
+    display: block;
+    font-size: 1.1em;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-top: 4%;
+}
+
+.card_btn, .card_btn img{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+span {
+    margin-right: 5px;
+}
+
+.card_btn {
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    font-size: 0.875em;
+    font-weight: 700;
+    transition: background-color .5s ease-in-out;
+    
+}
+
+.card_btn:hover {
+    background-color: hsl(158, 36%, 27%);
+}
+
+/* =======================
+   Media Quieries
+=========================*/
+
+@media screen and (min-width: 48rem) {
+    .card {
+        flex-direction: row;
+        width: 37.5rem;
+    }
+
+    .card_header, .card_main {
+        flex: 1 18.75rem;
+    }
+
+    .card_header {
+        background-image: url(/images/image-product-desktop.jpg);
+    }
+}
